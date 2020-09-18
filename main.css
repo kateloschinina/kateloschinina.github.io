@@ -474,48 +474,6 @@ body {
     color: white;
 }
 
-/* Links */
-
-/* Size adjustments */
-
-@media screen and (max-width: 600px) {
-    .top {
-        font-size: 22px;
-    }
-    
-    .bottom {
-        font-size: 14px;
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1000px) {
-    .top {
-        font-size: 48px;
-        letter-spacing: 0.2em;
-    }
-}
-
-@media screen and (max-height: 400px) {
-    .gal_rus {
-        visibility: hidden;
-    }
-    .gal_eng {
-        visibility: hidden;
-    }
-    .how_to {
-        visibility: hidden;
-    }
-    .get_there {
-        visibility: hidden;
-    }
-    .circle_text {
-        visibility: hidden;
-    }
-    .about_times {
-        visibility: hidden;
-    }
-}
-
 /* Pages classes*/
 
 /* happy page */
@@ -566,6 +524,67 @@ body {
 }
 
 /* Projects page */
+
+.portfolio_content {
+    width: 100%;
+    max-width: 90vh;
+    margin: auto;
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+
+.portfolio_item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 3px;
+    margin: 6px;
+    box-shadow: 3px 3px 2px 3px grey;
+    padding: 5px;
+}
+
+.portfolio_item img {
+    max-width: 100%;
+    max-height: 15vh;
+    grid-column: 1;
+    padding: 3px;
+    border: solid 3px rgb(210,35,42);
+}
+
+.portfolio_item img:hover {
+    max-width: 120%;
+    max-height: 20vh;
+}
+
+.portfolio_item div {
+    height: 15vh;
+    grid-column: 2;
+}
+
+.portfolio_item div p,
+.portfolio_item div li {
+    font-size: 1.48vh;
+    line-height: 166%;
+}
+
+.portfolio_item div p {
+    font-weight: bolder;
+}
+
+.portfolio_item div a {
+    color: rgb(210,35,42);
+    font-weight: bolder;
+}
+
+.portfolio_item div ul {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.portfolio_box .red_right_gal {
+    left: calc(50% + 15vh);
+    bottom: 6.5vh;
+}
 
 /* Gallery page */
 
@@ -715,7 +734,6 @@ body {
     margin-top: 1.3em;
     margin-bottom: 1.3em;
     line-height: 1.6em;
-    /* line-height: 3em; */
 }
 
 .about_p a {
@@ -870,4 +888,58 @@ body {
 
 .about_inner_circle_3:hover {
     border: solid white 0.2vh;
+}
+
+/* Size adjustments */
+
+@media screen and (max-width: 600px) {
+    .top {
+        font-size: 22px;
+    }
+    
+    .bottom {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    .top {
+        font-size: 48px;
+        letter-spacing: 0.2em;
+    }
+}
+
+@media (-webkit-device-pixel-ratio: 3) {
+    body {
+        font-size: 40px;
+    }
+
+    .portfolio_item_description ul {
+        display: none;
+    }
+
+    .portfolio_box .red_right_gal {
+    left: 10vw;
+    bottom: 6.5vh;
+}
+
+@media screen and (max-height: 400px) {
+    .gal_rus {
+        visibility: hidden;
+    }
+    .gal_eng {
+        visibility: hidden;
+    }
+    .how_to {
+        visibility: hidden;
+    }
+    .get_there {
+        visibility: hidden;
+    }
+    .circle_text {
+        visibility: hidden;
+    }
+    .about_times {
+        visibility: hidden;
+    }
 }
