@@ -10,7 +10,6 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    /*font-family: 'Indie Flower', cursive;*/
 }
 
 /* Typography styling */
@@ -496,7 +495,7 @@ body {
     }
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 400px) {
     .gal_rus {
         visibility: hidden;
     }
@@ -713,7 +712,10 @@ body {
 }
 
 .about_p {
-    line-height: 3em;
+    margin-top: 1.3em;
+    margin-bottom: 1.3em;
+    line-height: 1.6em;
+    /* line-height: 3em; */
 }
 
 .about_p a {
